@@ -29,6 +29,9 @@ const UserSchema = new mongoose.Schema({
     dob: {
         type: String
     },
+    doj:{
+        type: String
+    },
     address: {
         type: String,
         default: ""
@@ -52,9 +55,30 @@ const UserSchema = new mongoose.Schema({
         require: true,
         min: 6
     },
-    points: {
-        type: Number,
-        default: 0
+    
+    // shiftTiming: {  
+    //     type: String,
+    //     require: true
+    // },
+    shiftNumber:{
+        type:String,
+        require:true,
+    },
+    counterNumber:{
+        type:Number,
+        require:true
+    },
+    paymentStatus:{
+        type:String,
+        require:true
+    },
+    examPrep:{
+        type:String,
+        require:true,
+    },
+    aadharNumber:{
+        type:Number,
+        require:true,
     },
     activeTransactions: [{
         type: mongoose.Types.ObjectId,

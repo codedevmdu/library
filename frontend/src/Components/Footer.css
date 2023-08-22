@@ -1,8 +1,8 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: black;
-  color: wheat;
+  /* background-color: #009688;
+  color: wheat; */
 }
 
 .footer-data {
@@ -58,8 +58,7 @@
 }
 
 .copyright-details p {
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 14px;
   letter-spacing: 1.15px;
   text-align: center;
   padding: 20px 10px;

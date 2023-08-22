@@ -7,6 +7,7 @@
     height: auto;
     background-color: rgb(247,235,215);
     text-align: center;
+    position: relative;
 }
 
 .welcome-title{

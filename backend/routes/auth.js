@@ -19,11 +19,18 @@ router.post("/register", async (req, res) => {
       employeeId: req.body.employeeId,
       age: req.body.age,
       dob: req.body.dob,
+      doj: req.body.doj,
       gender: req.body.gender,
       address: req.body.address,
       mobileNumber: req.body.mobileNumber,
       email: req.body.email,
       password: hashedPass,
+      // shiftTiming:req.body.shiftTiming,
+      shiftNumber:req.body.shiftNumber,
+      counterNumber:req.body.counterNumber,
+      paymentStatus:req.body.paymentStatus,
+      examPrep:req.body.examPrep,
+      aadharNumber:req.body.aadharNumber,
       isAdmin: req.body.isAdmin,
     });
 

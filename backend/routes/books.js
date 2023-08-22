@@ -2,6 +2,7 @@ import express from "express"
 import Book from "../models/Book.js"
 import BookCategory from "../models/BookCategory.js"
 
+
 const router = express.Router()
 
 /* Get all books in the db */
@@ -61,7 +62,7 @@ router.post("/addbook", async (req, res) => {
         }
     }
     else {
-        return res.status(403).json("You dont have permission to delete a book!");
+        return res.status(403).json("You dont have permission to add a book!");
     }
 })
 

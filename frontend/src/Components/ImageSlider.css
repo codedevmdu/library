@@ -5,7 +5,12 @@
 
 img{
     width: auto;
-    height: 500px;
+    height: 400px;
+    /* margin-top: 30px; */
+}
+.carousel-item .d-block{
+    margin-top: 70px;
+    /* object-fit: cover; */
 }
 
 /* Mobile View */

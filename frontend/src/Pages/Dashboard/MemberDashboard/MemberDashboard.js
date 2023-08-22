@@ -61,7 +61,7 @@ function MemberDashboard() {
         >
           <div className="dashboard-logo">
             <LibraryBooksIcon style={{ fontSize: 50 }} />
-            <p className="logo-name">LCMS</p>
+            <p className="logo-name">24 HL</p>
           </div>
           <a
             href="#profile@member"
@@ -135,13 +135,13 @@ function MemberDashboard() {
               ></img>
               <div className="user-info">
                 <p className="user-name">{memberDetails?.userFullName}</p>
-                <p className="user-id">
+                <p className="user-id">Name :
                   {memberDetails?.userType === "Student"
                     ? memberDetails?.admissionId
                     : memberDetails?.employeeId}
                 </p>
-                <p className="user-email">{memberDetails?.email}</p>
-                <p className="user-phone">{memberDetails?.mobileNumber}</p>
+                <p className="user-email">Email Id:{memberDetails?.email}</p>
+                <p className="user-phone">Conatct No. :{memberDetails?.mobileNumber}</p>
               </div>
             </div>
             <div className="user-details-specific">
@@ -186,7 +186,7 @@ function MemberDashboard() {
               <div className="specific-right">
                 <div className="specific-right-top">
                   <p className="specific-right-topic">
-                    <b>Points</b>
+                    <b>Shift Timing</b>
                   </p>
                   <p
                     style={{
@@ -198,13 +198,13 @@ function MemberDashboard() {
                       marginTop: "15px",
                     }}
                   >
-                    540
+                    {memberDetails?.shiftTiming}<span> / </span>{memberDetails?.shiftNumber}
                   </p>
                 </div>
                 <div className="dashboard-title-line"></div>
                 <div className="specific-right-bottom">
                   <p className="specific-right-topic">
-                    <b>Rank</b>
+                    <b>Counter Number</b>
                   </p>
                   <p
                     style={{
@@ -216,14 +216,14 @@ function MemberDashboard() {
                       marginTop: "15px",
                     }}
                   >
-                    {memberDetails?.points}
+                    {memberDetails?.counterNumber}
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="member-activebooks-content" id="activebooks@member">
+          {/* <div className="member-activebooks-content" id="activebooks@member">
             <p className="member-dashboard-heading">Issued</p>
             <table className="activebooks-table">
               <tr>
@@ -315,7 +315,7 @@ function MemberDashboard() {
                 );
               })}
             </table>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

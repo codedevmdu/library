@@ -11,7 +11,7 @@ import categoryRoutes from "./routes/categories.js";
 /* App Config */
 dotenv.config();
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 
 /* Middlewares */
 app.use(express.json());

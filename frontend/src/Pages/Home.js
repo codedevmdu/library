@@ -14,12 +14,11 @@ import WelcomeBox from '../Components/WelcomeBox'
 function Home() {
     return (
         <div id='home'>
-            <ImageSlider/>
+            <ImageSlider />
             <WelcomeBox/>
-            <About/>
             <Stats/>
-            <RecentAddedBooks/>
             <PopularBooks/>
+            <RecentAddedBooks/>
             <ReservedBooks/>
             <News/>
             <PhotoGallery/>

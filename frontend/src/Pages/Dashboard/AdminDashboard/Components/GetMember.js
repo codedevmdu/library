@@ -4,6 +4,7 @@ import axios from "axios"
 import { Dropdown } from 'semantic-ui-react'
 import '../../MemberDashboard/MemberDashboard.css'
 import moment from "moment"
+import Profile from './Profile'
 
 function GetMember() {
 
@@ -32,7 +33,7 @@ function GetMember() {
 
     useEffect(() => {
         const getMemberDetails = async () => {
-            if(memberId !== null){
+            if (memberId !== null) {
                 try {
                     const response = await axios.get(API_URL + "api/users/getuser/" + memberId)
                     setMemberDetails(response.data)
@@ -62,12 +63,17 @@ function GetMember() {
             <div style={memberId === null ? { display: "none" } : {}}>
                 <div className="member-profile-content" id="profile@member" style={memberId === null ? { display: "none" } : {}}>
                     <div className="user-details-topbar">
-                        <img className="user-profileimage" src="./assets/images/Profile.png" alt=""></img>
-                        <div className="user-info">
-                            <p className="user-name">{memberDetails?.userFullName}</p>
-                            <p className="user-id">{memberDetails?.userType === "Student" ? memberDetails?.admissionId : memberDetails?.employeeId}</p>
-                            <p className="user-email">{memberDetails?.email}</p>
-                            <p className="user-phone">{memberDetails?.mobileNumber}</p>
+                        <img className="user-profileimage specific-left" style={{ "width": "25%" }} src="./assets/images/Profile.png" alt=""></img>
+                        {/* <Profile /> */}
+                        <div className="user-info specific-right">
+                            <p className="user-name"><b>Name :</b> {memberDetails?.userFullName}</p>
+                            <p className="user-id"><b>User Id :</b> {memberDetails?.userType === "Student" ? memberDetails?.admissionId : memberDetails?.employeeId}</p>
+                            <p className="user-email"><b>Email Id :</b> {memberDetails?.email}</p>
+                            <p className="user-phone"><b>Contact No. :</b> {memberDetails?.mobileNumber}</p>
+                            <p className="user-phone"><b>Aadhar No. :</b> {memberDetails?.aadharNumber}</p>
+                            <p className="user-join"><b>Date of Admission :</b> {memberDetails?.doj}</p>
+                            <p className="user-join"><b>Valid For :</b> {memberDetails?.paymentStatus}</p>
+                            <p className="user-join"><b>Exam Preparation :</b> {memberDetails?.examPrep}</p>
                         </div>
                     </div>
                     <div className="user-details-specific">
@@ -78,7 +84,7 @@ function GetMember() {
                                         <b>Age</b>
                                     </span>
                                     <span style={{ fontSize: "16px" }}>
-                                    {memberDetails?.age}
+                                        {memberDetails?.age}
                                     </span>
                                 </p>
                                 <p style={{ display: "flex", flex: "0.5", flexDirection: "column" }}>
@@ -86,7 +92,7 @@ function GetMember() {
                                         <b>Gender</b>
                                     </span>
                                     <span style={{ fontSize: "16px" }}>
-                                    {memberDetails?.gender}
+                                        {memberDetails?.gender}
                                     </span>
                                 </p>
                             </div>
@@ -111,19 +117,19 @@ function GetMember() {
                         </div>
                         <div className="specific-right">
                             <div style={{ display: "flex", flexDirection: "column", flex: "0.5" }}>
-                                <p style={{ fontSize: "20px", display: "flex", alignItems: "center", justifyContent: "center" }}><b>Points</b></p>
-                                <p style={{ fontSize: "25px", fontWeight: "500", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "15px" }}>540</p>
+                                <p style={{ fontSize: "20px", display: "flex", alignItems: "center", justifyContent: "center" }}><b>Shift Number</b></p>
+                                <p style={{ fontSize: "25px", fontWeight: "500", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "15px" }}>{memberDetails?.shiftNumber}</p>
                             </div>
                             <div className="dashboard-title-line"></div>
                             <div style={{ display: "flex", flexDirection: "column", flex: "0.5" }}>
-                                <p style={{ fontSize: "20px", display: "flex", alignItems: "center", justifyContent: "center" }}><b>Rank</b></p>
-                                <p style={{ fontSize: "25px", fontWeight: "500", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "15px" }}>{memberDetails?.points}</p>
+                                <p style={{ fontSize: "20px", display: "flex", alignItems: "center", justifyContent: "center" }}><b>Counter Number</b></p>
+                                <p style={{ fontSize: "25px", fontWeight: "500", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "15px" }}>{memberDetails?.counterNumber}</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="member-activebooks-content" id="activebooks@member">
+                {/* <div className="member-activebooks-content" id="activebooks@member">
                     <p style={{ fontWeight: "bold", fontSize: "22px", marginTop: "22px", marginBottom: "22px" }}>Issued</p>
                     <table className="activebooks-table">
                         <tr>
@@ -166,7 +172,7 @@ function GetMember() {
                             }).map((data, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{index+1}</td>
+                                        <td>{index + 1}</td>
                                         <td>{data.bookName}</td>
                                         <td>{data.fromDate}</td>
                                         <td>{data.toDate}</td>
@@ -190,7 +196,7 @@ function GetMember() {
                             memberDetails?.prevTransactions?.map((data, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{index+1}</td>
+                                        <td>{index + 1}</td>
                                         <td>{data.bookName}</td>
                                         <td>{data.fromDate}</td>
                                         <td>{data.toDate}</td>
@@ -200,7 +206,7 @@ function GetMember() {
                             })
                         }
                     </table>
-                </div>
+                </div> */}
             </div>
         </div>
     )

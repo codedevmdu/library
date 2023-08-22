@@ -1,17 +1,33 @@
 .popularbooks-container{
-    background-color: rgb(247,235,215);
+    background-color: #007bff91;
     display: flex;
     flex-direction: column;
 }
 
 .popularbooks{
-    padding: 20px;
     overflow: hidden;
     width: 100%;
     margin: 0 auto;	
     position: relative;
 	display: flex;
     height: auto;
+    padding-bottom: 27px;
+}
+
+.popularbooks .popularbook-images .card{
+    padding: 10px;
+    display: block;
+    width: 197px;
+    height: auto;
+    margin: 0 1vw;
+    border-radius: 10px;
+    margin: 25px;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+}
+
+.popularbooks .popularbook-images .card .card-img-top{
+    height: 128px;
 }
 
 .popularbooks:hover div{
@@ -19,12 +35,12 @@
 }
 
 .popularbooks-title{
-    position: relative;
-    color: #0E2431;
     margin-top: 20px;
     margin-bottom: 50px;
     text-align: center;
     font-size: 32px;
+    position: relative;
+    color: gold;
 }
 
 .popular-book:hover{

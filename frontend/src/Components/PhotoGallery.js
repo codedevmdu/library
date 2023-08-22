@@ -2,6 +2,7 @@ import React from 'react'
 import './PhotoGallery.css'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
+
 function PhotoGallery() {
     return (
         <div className='photogallery-container'>

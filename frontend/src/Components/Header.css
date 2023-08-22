@@ -4,19 +4,26 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 40px;
-    height: 60px;
+    height: 85px;
     width: 100%;
     position: fixed;
     z-index: 100;
-    background-color: rgb(16,25,13);
+    background-color: teal;
     box-shadow: 0 1px 4px rgba(146,161,176,.15);
     top: 0%;
 }
 
 .logo-nav a{
     font-size: 20px;
-    color: rgb(233,83,75);
+    color: aliceblue;
     font-weight: 800;
+    clear: both;
+    display: inline-block;
+    white-space: nowrap;
+    
+}
+.logo-nav a img{
+    height: 80px;
 }
 
 .logo-nav a:hover{
@@ -55,15 +62,18 @@
     align-items: center;
     padding: 0px 40px;
     margin-top: 15px;
-    color: rgb(243, 6, 6);
+    color: aliceblue;
 }
 
 .option a{
-    color: rgb(233,83,75);
+    color: aliceblue;
     display: flex;
     align-items: center;
     font-weight: 800;
     font-size: 18px;
+    clear: both;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .option a:hover{

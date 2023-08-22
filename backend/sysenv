@@ -1,0 +1,2 @@
+PORT = "5000"
+MONGO_URL = "mongodb+srv://pritam:Pritam@123@cluster0.0vn4c4c.mongodb.net/?retryWrites=true&w=majority"

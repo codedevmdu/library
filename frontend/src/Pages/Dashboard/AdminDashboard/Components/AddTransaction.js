@@ -179,7 +179,7 @@ function AddTransaction() {
                         <th>Name</th>
                         <th>Issued</th>
                         <th>Reserved</th>
-                        <th>Points</th>
+                        
                     </tr>
                     <tr>
                         <td>{borrowerDetails.userFullName}</td>
